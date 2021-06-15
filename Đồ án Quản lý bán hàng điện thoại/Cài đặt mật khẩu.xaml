@@ -1,0 +1,33 @@
+﻿<Window x:Class="Đồ_án_Quản_lý_bán_hàng_điện_thoại.Cài_đặt_mật_khẩu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Đồ_án_Quản_lý_bán_hàng_điện_thoại"
+        mc:Ignorable="d"
+        Title="Cài đặt mật khẩu" Height="336" Width="563">
+    <Grid Background="#FF2E3130">
+        <Label Content="Tài khoản :" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White"  FontWeight="Bold" FontSize="16"/>
+        <TextBox x:Name="txtSetupAccount" HorizontalAlignment="Left" Height="23" Margin="10,36,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="265" Foreground="White"  FontWeight="Bold" FontSize="16" Background="#FF545D6A" TextChanged="TxtSetupAccount_TextChanged"/>
+        <Label Content="Mật khẩu cũ :" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Foreground="White"  FontWeight="Bold" FontSize="16"/>
+        <Label Content="Mật khẩu mới :" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top" Foreground="White"  FontWeight="Bold" FontSize="16"/>
+        <Label Content="Nhập lại mật khẩu mới :" HorizontalAlignment="Left" Margin="10,172,0,0" VerticalAlignment="Top" Foreground="White"  FontWeight="Bold" FontSize="16"/>
+        <PasswordBox x:Name="passSetupOld" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Width="265" Height="23" PasswordChar="•" Foreground="White"  FontWeight="Bold" FontSize="16" Background="#FF545D6A" PasswordChanged="PassSetupOld_PasswordChanged"/>
+        <PasswordBox x:Name="passSetupNew" HorizontalAlignment="Left" Margin="10,144,0,0" VerticalAlignment="Top" Width="265" Height="23" PasswordChar="•" Foreground="White"  FontWeight="Bold" FontSize="16" Background="#FF545D6A" PasswordChanged="PassSetupNew_PasswordChanged"/>
+        <PasswordBox x:Name="passSetupNewCompare" HorizontalAlignment="Left" Margin="10,198,0,0" VerticalAlignment="Top" Width="265" Height="23" PasswordChar="•" Foreground="White"  FontWeight="Bold" FontSize="16" Background="#FF545D6A" PasswordChanged="PassSetupNewCompare_PasswordChanged"/>
+        <Button x:Name="btnAccept" Content="Chấp nhận" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top" Width="265" Height="45" Click="BtnAccept_Click" Foreground="White"  FontWeight="Bold" FontSize="16" Background="#FF545D6A"/>
+        <Button x:Name="btnCancel" Content="Hủy" HorizontalAlignment="Left" Margin="280,238,-41,0" VerticalAlignment="Top" Width="265" Height="45" Click="BtnCancel_Click" Foreground="White"  FontWeight="Bold" FontSize="16" Background="#FF545D6A"/>
+        <Label Visibility="Hidden" x:Name="lbAcc" Content="Tài khoản không tồn tại" HorizontalAlignment="Left" Margin="280,33,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <Label Visibility="Hidden" x:Name="lbPassOld" Content="Bạn nhập sai password" HorizontalAlignment="Left" Margin="280,87,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <Label Visibility="Hidden" x:Name="lbPassNew" Content="Password phải hơn 5 kí tự" HorizontalAlignment="Left" Margin="280,141,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <Label Visibility="Hidden" x:Name="lbPassReNew" Content="Password của bạn chưa trùng khớp" HorizontalAlignment="Left" Margin="280,195,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <Label Visibility="Hidden" x:Name="lbTuongDoi" Content="*****Tương đối*****" HorizontalAlignment="Left" Margin="280,141,0,0" VerticalAlignment="Top" Foreground="Yellow"/>
+        <Label Visibility="Hidden" x:Name="lbKha" Content="*****Khá*****" HorizontalAlignment="Left" Margin="280,141,0,0" VerticalAlignment="Top" Foreground="LawnGreen"/>
+        <Label Visibility="Hidden" x:Name="lbTot" Content="*****Tốt*****" HorizontalAlignment="Left" Margin="280,141,0,0" VerticalAlignment="Top" Foreground="Aqua"/>
+        <Label Visibility="Hidden" x:Name="lbChuaNhap" Content="Chưa nhập tài khoản" HorizontalAlignment="Left" Margin="280,33,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <Label Visibility="Hidden" x:Name="lbChuaNhapPassOld" Content="Chưa nhập mật khẩu cũ" HorizontalAlignment="Left" Margin="280,87,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <Label Visibility="Hidden" x:Name="lbChuaNhapPassNew" Content="Chưa Nhập mật khẩu mới" HorizontalAlignment="Left" Margin="280,141,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <Label Visibility="Hidden" x:Name="lbChuaNhapPassReNew" Content="Chưa nhập lại mậ khẩu mới" HorizontalAlignment="Left" Margin="280,195,0,0" VerticalAlignment="Top" Foreground="Red"/>
+
+    </Grid>
+</Window>

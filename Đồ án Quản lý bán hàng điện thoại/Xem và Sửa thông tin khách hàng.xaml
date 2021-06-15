@@ -1,0 +1,23 @@
+﻿<Window x:Class="Đồ_án_Quản_lý_bán_hàng_điện_thoại.Xem_và_Sửa_thông_tin_khách_hàng"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Đồ_án_Quản_lý_bán_hàng_điện_thoại"
+        mc:Ignorable="d"
+        Title="Xem_và_Sửa_thông_tin_khách_hàng" Height="279" Width="293" Background="#2e3130">
+    <Grid>
+        <Label Foreground="White" Content="Họ Tên :" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Foreground="White" Content="Giới tính :" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Width="67" FontWeight="Bold"/>
+        <Label Foreground="White" Content="Ngày sinh :" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Foreground="White" Content="SĐT :" HorizontalAlignment="Left" Margin="10,148,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox Background="#545d6a" Foreground="White" x:Name="txtHoTenCus_Update" HorizontalAlignment="Left" Height="26" Margin="89,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187"/>
+        <TextBox Background="#545d6a" Foreground="White" x:Name="txtGioiTinhCus_Update" HorizontalAlignment="Left" Height="26" Margin="89,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187"/>
+        <TextBox Background="#545d6a" Foreground="White" x:Name="txtNgaySinhCus_Update" HorizontalAlignment="Left" Height="26" Margin="89,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187"/>
+        <TextBox Background="#545d6a" Foreground="White" x:Name="txtSDTCus_Update" HorizontalAlignment="Left" Height="26" Margin="89,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187"/>
+        <Button Background="#545d6a" Foreground="White" x:Name="btnFix" Content="Sửa" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top" Width="96" Height="37" Click="BtnFix_Click" FontWeight="Bold"/>
+        <Button Background="#545d6a" Foreground="White" x:Name="btnCancel" Content="Hủy" HorizontalAlignment="Left" Margin="180,189,0,0" VerticalAlignment="Top" Width="96" Height="37" Click="BtnCancel_Click" FontWeight="Bold"/>
+        <Label Foreground="White" Content="Mã :" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox Background="#545d6a" Foreground="White" x:Name="txtMaCus_Update" HorizontalAlignment="Left" Height="26" Margin="89,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187" IsReadOnly="True"/>
+    </Grid>
+</Window>

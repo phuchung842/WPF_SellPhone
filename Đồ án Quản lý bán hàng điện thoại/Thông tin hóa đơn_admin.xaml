@@ -1,0 +1,36 @@
+﻿<Window x:Class="Đồ_án_Quản_lý_bán_hàng_điện_thoại.Thông_tin_hóa_đơn_admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Đồ_án_Quản_lý_bán_hàng_điện_thoại"
+        mc:Ignorable="d"
+        Title="Thông_tin_hóa_đơn_admin" Height="450" Width="800" Background="#2e3130">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" x:Name="dataGrid" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="599" Background="#2e3130">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mã hóa đơn" Binding="{Binding MaHD}"/>
+                <DataGridTextColumn Header="Mã nhân viên" Binding="{Binding MaNV_HD}"/>
+                <DataGridTextColumn Header="Mã khách hàng" Binding="{Binding MaKH_HD}"/>
+                <DataGridTextColumn Header="Ngày" Binding="{Binding NgayHD}" Width="120"/>
+                <DataGridTextColumn Header="Tổng tiền" Binding="{Binding Tong}" Width="230"/>
+                <DataGridTextColumn Header="Today" Binding="{Binding Today}" Visibility="Hidden"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnDetailInfoBill" Content="Thông tin chi tiết" HorizontalAlignment="Left" Margin="614,314,0,0" VerticalAlignment="Top" Width="168" Height="45" Background="#545d6a" Foreground="White" Click="BtnDetailInfoBill_Click" FontWeight="Bold"/>
+        <Button x:Name="btnExit" Content="Thoát" HorizontalAlignment="Left" Margin="614,364,0,0" VerticalAlignment="Top" Width="168" Height="45" Background="#545d6a" Foreground="White" Click="BtnExit_Click" FontWeight="Bold"/>
+        <TextBox x:Name="txtTempMaHD" HorizontalAlignment="Left" Height="22" Margin="614,287,0,0" TextWrapping="Wrap" Text="{Binding ElementName=dataGrid,Path=SelectedItem.MaHD}" VerticalAlignment="Top" Width="120" IsReadOnly="True" Background="#545d6a" Foreground="White" FontWeight="Bold"/>
+        <DatePicker x:Name="datePickerFrom" HorizontalAlignment="Left" Margin="614,36,0,0" VerticalAlignment="Top" Width="168" SelectedDateChanged="DatePickerFrom_SelectedDateChanged" FontWeight="Bold"/>
+        <DatePicker x:Name="datePickerTo" HorizontalAlignment="Left" Margin="614,87,0,0" VerticalAlignment="Top" Width="168" SelectedDateChanged="DatePickerTo_SelectedDateChanged" FontWeight="Bold"/>
+        <Button x:Name="btnThongKe" Content="Thống kê" HorizontalAlignment="Left" Margin="614,164,0,0" VerticalAlignment="Top" Width="168" Height="40" Background="#545d6a" Foreground="White" Click="BtnThongKe_Click" FontWeight="Bold"/>
+        <TextBox x:Name="txtTongDoanhThu" HorizontalAlignment="Left" Height="23" Margin="614,137,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="168" IsReadOnly="True" Background="#545d6a" Foreground="White" FontWeight="Bold"/>
+        <Label Foreground="White" Content="From :" HorizontalAlignment="Left" Margin="614,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Foreground="White" Content="To :" HorizontalAlignment="Left" Margin="614,61,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="614,209,0,0" VerticalAlignment="Top" Width="168" Height="40" Background="#545d6a" Foreground="White" Click="BtnRefresh_Click" FontWeight="Bold"/>
+        <Label Foreground="White" Content="Tổng doanh thu :" HorizontalAlignment="Left" Margin="614,111,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Foreground="White" Content="Mã hóa đơn :" HorizontalAlignment="Left" Margin="614,261,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Visibility="Hidden" x:Name="lbLoiStart" Content="Lỗi ngày bắt đầu" HorizontalAlignment="Left" Margin="656,10,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <Label Visibility="Hidden" x:Name="lbLoiEnd" Content="Lỗi ngày kết thúc" HorizontalAlignment="Left" Margin="656,60,0,0" VerticalAlignment="Top" Foreground="Red"/>
+
+    </Grid>
+</Window>

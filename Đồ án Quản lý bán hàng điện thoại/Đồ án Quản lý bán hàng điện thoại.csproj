@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D2EBA352-A2DF-4660-B3B6-D034A8343DE5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Đồ_án_Quản_lý_bán_hàng_điện_thoại</RootNamespace>
+    <AssemblyName>Đồ án Quản lý bán hàng điện thoại</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.2.0\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Bán hàng.xaml.cs">
+      <DependentUpon>Bán hàng.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectToSQL.cs" />
+    <Compile Include="Cài đặt mật khẩu.xaml.cs">
+      <DependentUpon>Cài đặt mật khẩu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cập nhật sản phẩm.xaml.cs">
+      <DependentUpon>Cập nhật sản phẩm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Nhập thông tin khách hàng.xaml.cs">
+      <DependentUpon>Nhập thông tin khách hàng.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Thông tin chi tiết sản phẩm.xaml.cs">
+      <DependentUpon>Thông tin chi tiết sản phẩm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Thông tin hóa đơn_admin.xaml.cs">
+      <DependentUpon>Thông tin hóa đơn_admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Thông tin khách hàng_admin.xaml.cs">
+      <DependentUpon>Thông tin khách hàng_admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Thông tin nhân viên_admin.xaml.cs">
+      <DependentUpon>Thông tin nhân viên_admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xem và Sửa thông tin khách hàng.xaml.cs">
+      <DependentUpon>Xem và Sửa thông tin khách hàng.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Đăng nhập.xaml.cs">
+      <DependentUpon>Đăng nhập.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Bán hàng.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cài đặt mật khẩu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cập nhật sản phẩm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Nhập thông tin khách hàng.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Nhập thông tin sản phẩm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Thông tin chi tiết sản phẩm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Thông tin hóa đơn_admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Thông tin khách hàng_admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Thông tin nhân viên_admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Xem và Sửa thông tin khách hàng.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Đăng nhập.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Nhập thông tin sản phẩm.xaml.cs">
+      <DependentUpon>Nhập thông tin sản phẩm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="ImageProduct\57384304_281717709376628_4691070465895038976_n.png" />
+    <Resource Include="ImageProduct\57446442_319750952051728_7161149017303285760_n.png" />
+    <Resource Include="ImageProduct\59286038_398269994329300_8655706020363894784_n.png" />
+    <Resource Include="ImageProduct\59342881_3239627572730047_5267817632387563520_n.png" />
+    <Resource Include="ImageProduct\59353893_738521066549975_3888302449336778752_n.png" />
+    <Resource Include="ImageProduct\59374814_429562507862708_5817983336479457280_n.png" />
+    <Resource Include="ImageProduct\59380304_668732596896490_1914246071760977920_n.png" />
+    <Resource Include="ImageProduct\59380946_178539473063764_2573201064077557760_n.png" />
+    <Resource Include="ImageProduct\59382979_2327012530652686_1142727906535931904_n.png" />
+    <Resource Include="ImageProduct\59397283_588094015005505_6874985821796040704_n.png" />
+    <Resource Include="ImageProduct\59403958_439536440195957_4320820319062327296_n.png" />
+    <Resource Include="ImageProduct\59404261_826438021045198_44474223141322752_n.png" />
+    <Resource Include="ImageProduct\59406061_2160634164032934_279259009809121280_n.png" />
+    <Resource Include="ImageProduct\59410578_455775868562806_1163185604565925888_n.png" />
+    <Resource Include="ImageProduct\59413424_2182286952081627_1263564466356748288_n.png" />
+    <Resource Include="ImageProduct\59414565_624524634677393_2378548215600381952_n.png" />
+    <Resource Include="ImageProduct\59422802_299518440989506_428254500503945216_n.png" />
+    <Resource Include="ImageProduct\59428918_349589279025957_7104259078796345344_n.png" />
+    <Resource Include="ImageProduct\59433264_2650692511627524_685508120817958912_n.png" />
+    <Resource Include="ImageProduct\59435661_412484482865963_4551651528204615680_n.png" />
+    <Resource Include="ImageProduct\59435663_2278491269134152_2625339926941532160_n.png" />
+    <Resource Include="ImageProduct\59436490_622523284910475_2236658838491103232_n.png" />
+    <Resource Include="ImageProduct\59440921_334302183949899_7393932783002845184_n.png" />
+    <Resource Include="ImageProduct\59454017_280157656221798_5830222464264699904_n.png" />
+    <Resource Include="ImageProduct\59462692_262758197860426_5470002895724216320_n.png" />
+    <Resource Include="ImageProduct\59480723_461402261333042_5565044624994598912_n.png" />
+    <Resource Include="ImageProduct\59495691_430935787476982_2717636214332063744_n.png" />
+    <Resource Include="ImageProduct\59496421_1383459235128285_6152747737663143936_n.png" />
+    <Resource Include="ImageProduct\59502512_2240880246006974_9195671580854714368_n.png" />
+    <Resource Include="ImageProduct\59520522_413530062794241_1039925618038276096_n.png" />
+    <Resource Include="ImageProduct\59522797_420046445444880_4125072524507611136_n.png" />
+    <Resource Include="ImageProduct\59537964_335364190496863_7772103047097876480_n.png" />
+    <Resource Include="ImageProduct\59546158_886029021737584_356516512162381824_n.png" />
+    <Resource Include="ImageProduct\59564765_2378570055748007_1607975316842610688_n.png" />
+    <Resource Include="ImageProduct\59569147_689731478129142_6616423185644519424_n.png" />
+    <Resource Include="ImageProduct\59573918_1076196815919532_4975422134391144448_n.png" />
+    <Resource Include="ImageProduct\59575777_824083261295172_3227425815637524480_n.png" />
+    <Resource Include="ImageProduct\59595346_318553568820327_5581841546304552960_n.png" />
+    <Resource Include="ImageProduct\59596708_411291186268601_5774846385765482496_n.png" />
+    <Resource Include="ImageProduct\59602381_461567031249509_7213646613015691264_n.png" />
+    <Resource Include="ImageProduct\59602709_359184518066575_9142040483143352320_n.png" />
+    <Resource Include="ImageProduct\59626948_1322746237878128_5141079521214070784_n.png" />
+    <Resource Include="ImageProduct\59633454_439632566592623_5082701720136450048_n.png" />
+    <Resource Include="ImageProduct\59673622_436162853825952_4733045718149758976_n.png" />
+    <Resource Include="ImageProduct\59679613_828004697578145_6073085869667909632_n.png" />
+    <Resource Include="ImageProduct\59695627_590102008154003_1024448733451911168_n.png" />
+    <Resource Include="ImageProduct\59714413_2634334216636775_4096228645134139392_n.png" />
+    <Resource Include="ImageProduct\59716829_2356813647884450_6034236258388017152_n.png" />
+    <Resource Include="ImageProduct\59726874_316921818982494_3624239918584168448_n.png" />
+    <Resource Include="ImageProduct\59727239_1101575346717866_3018205932740935680_n.png" />
+    <Resource Include="ImageProduct\59730719_299196954326081_8504684185573654528_n.png" />
+    <Resource Include="ImageProduct\59731717_441360686638248_8911902619161591808_n.png" />
+    <Resource Include="ImageProduct\59767310_353874968819154_2453445779453378560_n.png" />
+    <Resource Include="ImageProduct\59777654_1058431364545877_7093066123440029696_n.png" />
+    <Resource Include="ImageProduct\59785281_2782195541821472_8535291836216901632_n.png" />
+    <Resource Include="ImageProduct\59798056_294492111436470_4428845090223423488_n.png" />
+    <Resource Include="ImageProduct\59811045_2682172945157827_5372315599743483904_n.png" />
+    <Resource Include="ImageProduct\59848548_438450386902772_6503108423524024320_n.png" />
+    <Resource Include="ImageProduct\59849294_902447450129658_2935608446008950784_n.png" />
+    <Resource Include="ImageProduct\59849953_294886454755268_1836696593235968000_n.png" />
+    <Resource Include="ImageProduct\59924444_283895492548082_6366512469053014016_n.png" />
+    <Resource Include="ImageProduct\59927702_437523500161447_7580732872189804544_n.png" />
+    <Resource Include="ImageProduct\59933140_847250885643587_4470273799299792896_n.png" />
+    <Resource Include="ImageProduct\60087112_1577056545771345_3024507925369454592_n.png" />
+    <Resource Include="ImageProduct\60089540_846847692342026_9071718588468953088_n.png" />
+    <Resource Include="ImageProduct\ViVo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

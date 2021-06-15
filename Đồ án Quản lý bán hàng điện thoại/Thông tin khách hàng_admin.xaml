@@ -1,0 +1,34 @@
+﻿<Window x:Class="Đồ_án_Quản_lý_bán_hàng_điện_thoại.Thông_tin_khách_hàng_admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Đồ_án_Quản_lý_bán_hàng_điện_thoại"
+        mc:Ignorable="d"
+        Title="Thông_tin_khách_hàng_admin" Height="385.5" Width="825.5" Background="#2e3130">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" x:Name="dataGrid_InfoCustom_AD" HorizontalAlignment="Left" Height="335" Margin="10,10,0,0" VerticalAlignment="Top" Width="596" Background="#2e3130">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mã khách hàng" Binding="{Binding MaKH}"/>
+                <DataGridTextColumn Header="Họ và tên" Binding="{Binding HoTenKH}" Width="235"/>
+                <DataGridTextColumn Header="Giới tính" Binding="{Binding GioiTinhKH}"/>
+                <DataGridTextColumn Header="Ngày sinh" Binding="{Binding NgaySinhKH}"/>
+                <DataGridTextColumn Header="SĐT" Binding="{Binding SDTKH}" Width="150"/>
+                
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Foreground="White" Content="Mã khách hàng :" HorizontalAlignment="Left" Margin="611,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Foreground="White" Content="Họ tên :" HorizontalAlignment="Left" Margin="611,59,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Foreground="White" Content="Giới tính :" HorizontalAlignment="Left" Margin="611,108,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Foreground="White" Content="Ngày sinh :" HorizontalAlignment="Left" Margin="611,157,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Foreground="White" Content="SĐT :" HorizontalAlignment="Left" Margin="611,206,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox Background="#545d6a" Foreground="White" x:Name="txtMaKHInfoAd" HorizontalAlignment="Left" Height="23" Margin="611,36,0,0" TextWrapping="Wrap" Text="{Binding ElementName=dataGrid_InfoCustom_AD,Path=SelectedItem.MaKH}" VerticalAlignment="Top" Width="197"/>
+        <TextBox Background="#545d6a" Foreground="White" x:Name="txtHoTenKHInfoAd" HorizontalAlignment="Left" Height="23" Margin="611,85,0,0" TextWrapping="Wrap" Text="{Binding ElementName=dataGrid_InfoCustom_AD,Path=SelectedItem.HoTenKH}" VerticalAlignment="Top" Width="197"/>
+        <TextBox Background="#545d6a" Foreground="White" x:Name="txtGioiTinhKHInfoAd" HorizontalAlignment="Left" Height="23" Margin="611,134,0,0" TextWrapping="Wrap" Text="{Binding ElementName=dataGrid_InfoCustom_AD,Path=SelectedItem.GioiTinhKH}" VerticalAlignment="Top" Width="197"/>
+        <TextBox Background="#545d6a" Foreground="White" x:Name="txtNgaySinhKHInfoAd" HorizontalAlignment="Left" Height="23" Margin="611,183,0,0" TextWrapping="Wrap" Text="{Binding ElementName=dataGrid_InfoCustom_AD,Path=SelectedItem.NgaySinhKH}" VerticalAlignment="Top" Width="197"/>
+        <TextBox Background="#545d6a" Foreground="White" x:Name="txtSDTKHInfoAd" HorizontalAlignment="Left" Height="23" Margin="611,232,0,0" TextWrapping="Wrap" Text="{Binding ElementName=dataGrid_InfoCustom_AD,Path=SelectedItem.SDTKH}" VerticalAlignment="Top" Width="197"/>
+        <Button Background="#545d6a" Foreground="White" x:Name="btnUpdate_InfoCustom_AD" Content="Cập nhật" HorizontalAlignment="Left" Margin="611,260,0,0" VerticalAlignment="Top" Width="197" Height="40" Click="BtnUpdate_InfoCustom_AD_Click" FontWeight="Bold"/>
+        <Button Background="#545d6a" Foreground="White" x:Name="btnCancel_InfoCustom_AD" Content="Hủy" HorizontalAlignment="Left" Margin="611,305,0,0" VerticalAlignment="Top" Width="197" Height="40" Click="BtnCancel_InfoCustom_AD_Click" FontWeight="Bold"/>
+
+    </Grid>
+</Window>

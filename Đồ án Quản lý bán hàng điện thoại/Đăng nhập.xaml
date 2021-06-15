@@ -1,0 +1,32 @@
+﻿<Window x:Class="Đồ_án_Quản_lý_bán_hàng_điện_thoại.Đăng_nhập"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Đồ_án_Quản_lý_bán_hàng_điện_thoại"
+        mc:Ignorable="d"
+        Title="Đăng nhập" Height="389" Width="284" KeyDown="Window_KeyDown" >
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF00FFAE" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Border Background="#2e3130" CornerRadius="20" Margin="20">
+            <StackPanel>
+                <Label Content="  QUẢN LÝ CỬA HÀNG &#xA;         ĐIỆN THOẠI" Height="54" Margin="10,20,0,0" VerticalAlignment="Top" FontFamily="Tahoma" Background="{x:Null}" FontSize="18" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Width="216"/>
+                <Separator></Separator>
+                <Label Content="  User :" Foreground="White" FontWeight="Bold" FontSize="16"/>
+                <TextBox x:Name="txtUser" Margin="10,0,10,0" Height="25" Background="#545d6a" Text="" Foreground="White" FontFamily="Tahoma" FontSize="16"/>
+                <Label Content="  Password :" Foreground="White" FontWeight="Bold" FontSize="16"/>
+                <PasswordBox x:Name="nhappass" Margin="10,0,10,0" Height="25" Background="#545d6a" Foreground="White" FontFamily="Tahoma" FontSize="16" MaxLength="12" PasswordChar="•" />
+                <Button x:Name="btnDangnhap" Content="Đăng nhập" Margin="60,20,60,0" Foreground="White" Background="#545d6a" FontSize="18" Click="BtnDangnhap_Click"/>
+                <Button x:Name="btnThoat" Content="Thoát" Margin="60,20,60,0" Foreground="White" Background="#545d6a" FontSize="18" Click="BtnThoat_Click"/>
+                <Label x:Name="lbFixPass" HorizontalAlignment="Center" Content="Sửa mật khẩu" Margin="76,0" Foreground="#FFFDCF00" Width="84" MouseDown="LbFixPass_MouseDown"/>
+
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,42 @@
+﻿<Window x:Class="Đồ_án_Quản_lý_bán_hàng_điện_thoại.Thông_tin_nhân_viên_admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Đồ_án_Quản_lý_bán_hàng_điện_thoại"
+        mc:Ignorable="d"
+        Title="Thông_tin_nhân_viên_admin" Height="611" Width="825.5" Background="#2e3130">
+    <Grid>
+        <DataGrid IsReadOnly="True" AutoGenerateColumns="False" x:Name="dataGrid_InfoEmployee_AD" HorizontalAlignment="Left" Height="369" Margin="10,10,0,0" VerticalAlignment="Top" Width="798" Background="#2e3130">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mã nhân viên" Binding="{Binding MaNV}"/>
+                <DataGridTextColumn Header="Họ và tên" Binding="{Binding HoTenNV}" Width="200"/>
+                <DataGridTextColumn Header="Giới tính" Binding="{Binding GioiTinhNV}"/>
+                <DataGridTextColumn Header="Ngày sinh" Binding="{Binding NgaySinhNV}"/>
+                <DataGridTextColumn Header="SĐT" Binding="{Binding SDTNV}" Width="100"/>
+                <DataGridTextColumn Header="CMND" Binding="{Binding CMNDNV}" Width="100"/>
+                <DataGridTextColumn Header="Địa chỉ" Binding="{Binding DiaChiNV}" Width="195"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Foreground="White" Content="Mã nhân viên :" HorizontalAlignment="Left" Margin="10,384,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox Background="#545d6a" Foreground="White" x:Name="txtMa" HorizontalAlignment="Left" Height="26" Margin="10,410,0,0" TextWrapping="Wrap" Text="{Binding ElementName=dataGrid_InfoEmployee_AD,Path=SelectedItem.MaNV}" VerticalAlignment="Top" Width="169"/>
+        <Label Foreground="White" Content="Họ và tên :" HorizontalAlignment="Left" Margin="10,441,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox Background="#545d6a" Foreground="White" x:Name="txtHoTen" HorizontalAlignment="Left" Height="26" Margin="10,467,0,0" TextWrapping="Wrap" Text="{Binding ElementName=dataGrid_InfoEmployee_AD,Path=SelectedItem.HoTenNV}" VerticalAlignment="Top" Width="169"/>
+        <Label Foreground="White" Content="Giới tính :" HorizontalAlignment="Left" Margin="10,498,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox Background="#545d6a" Foreground="White" x:Name="txtGioiTinh" HorizontalAlignment="Left" Height="26" Margin="10,524,0,0" TextWrapping="Wrap" Text="{Binding ElementName=dataGrid_InfoEmployee_AD,Path=SelectedItem.GioiTinhNV}" VerticalAlignment="Top" Width="169"/>
+        <Label Foreground="White" Content="Ngày sinh :" HorizontalAlignment="Left" Margin="206,384,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox Background="#545d6a" Foreground="White" x:Name="txtNgaySinh" HorizontalAlignment="Left" Height="26" Margin="206,410,0,0" TextWrapping="Wrap" Text="{Binding ElementName=dataGrid_InfoEmployee_AD,Path=SelectedItem.NgaySinhNV}" VerticalAlignment="Top" Width="169"/>
+        <Label Foreground="White" Content="SĐT :" HorizontalAlignment="Left" Margin="206,441,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox Background="#545d6a" Foreground="White" x:Name="txtSDT" HorizontalAlignment="Left" Height="26" Margin="206,467,0,0" TextWrapping="Wrap" Text="{Binding ElementName=dataGrid_InfoEmployee_AD,Path=SelectedItem.SDTNV}" VerticalAlignment="Top" Width="169"/>
+        <Label Foreground="White" Content="CMND :" HorizontalAlignment="Left" Margin="206,498,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox Background="#545d6a" Foreground="White" x:Name="txtCMND" HorizontalAlignment="Left" Height="26" Margin="206,524,0,0" TextWrapping="Wrap" Text="{Binding ElementName=dataGrid_InfoEmployee_AD,Path=SelectedItem.CMNDNV}" VerticalAlignment="Top" Width="169"/>
+        <Label Foreground="White" Content="Địa chỉ" HorizontalAlignment="Left" Margin="407,384,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox Background="#545d6a" Foreground="White" x:Name="txtDiaChi" HorizontalAlignment="Left" Height="26" Margin="407,410,0,0" TextWrapping="Wrap" Text="{Binding ElementName=dataGrid_InfoEmployee_AD,Path=SelectedItem.DiaChiNV}" VerticalAlignment="Top" Width="401"/>
+        <RadioButton Foreground="White" x:Name="rdbtnAddEmp" Content="Thêm nhân viên" HorizontalAlignment="Left" Margin="407,452,0,0" VerticalAlignment="Top" Checked="RdbtnAddEmp_Checked" FontWeight="Bold"/>
+        <RadioButton Foreground="White" x:Name="rdbtnUpdateEmp" Content="Cập nhật nhân viên" HorizontalAlignment="Left" Margin="579,452,0,0" VerticalAlignment="Top" Checked="RdbtnUpdateEmp_Checked" IsChecked="True" FontWeight="Bold"/>
+        <Button Background="#545d6a" Foreground="White" x:Name="btnAccept" Content="Chấp nhận" HorizontalAlignment="Left" Margin="407,470,0,0" VerticalAlignment="Top" Width="189" Height="46" Click="BtnAccept_Click" FontWeight="Bold"/>
+        <Button Background="#545d6a" Foreground="White" x:Name="btnRemove" Content="Xóa" HorizontalAlignment="Left" Margin="619,470,0,0" VerticalAlignment="Top" Width="189" Height="46" Click="BtnRemove_Click" FontWeight="Bold"/>
+        <Button Background="#545d6a" Foreground="White" x:Name="btnCancel" Content="Hủy" HorizontalAlignment="Left" Margin="407,521,0,0" VerticalAlignment="Top" Width="401" Height="46" Click="BtnCancel_Click" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
